@@ -13,14 +13,14 @@ namespace Teste {
         }
 
         [DataTestMethod]
-        [DataRow(1)]
         [DataRow(2)]
         [DataRow(3)]
+        [DataRow(4)]
         public void IsPrime(int value) {
 
             var result = _primeService.IsPrime(value);
 
-            Assert.IsFalse(result, "1 should not be prime");
+            Assert.IsTrue(result, value + " não é primo");
 
         }
 
